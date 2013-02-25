@@ -25,4 +25,10 @@ class elasticsearch::config {
     owner   => 'root',
     group   => 'root',
   }
+
+  file {$pathdata:
+    ensure => directory,
+    owner  => $user,
+    group  => $group,
+  }
 }
